@@ -1,0 +1,33 @@
+h1{
+    color: blue;
+}
+fieldset{
+    padding: 15px;
+    border: 1px solid #bebebe;
+    margin: 10px;
+}
+legend{
+    width: inherit;
+    color: #bebebe;
+}
+.btn-group-sm>.btn, .btn-sm {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1;
+    border-radius: .2rem;
+}
+label{
+    width: inherit;
+}
+#country{
+    width: inherit;
+}
+.alert-warning{
+    width: inherit;
+}
+#mobile-error{
+    display: none;
+}
+#age-error{
+    display: none;
+}
