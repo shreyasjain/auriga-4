@@ -31,3 +31,26 @@ label{
 #age-error{
     display: none;
 }
+#container-2,#container-3{
+    display: none;
+}
+.container-tabs{
+    background-color: #b1b1b1;
+    border-radius: inherit;
+    line-height: 60px;
+}
+.container-tabs a{
+    
+        color: #000000;
+        text-decoration: none;
+        background-color: transparent;
+        border: 1px solid black;
+        padding: 10px;
+        margin: 30px;
+        border-radius: inherit;
+    
+}
+.container-tabs a:hover{
+    color: white;
+    border-color: white;
+}

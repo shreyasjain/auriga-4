@@ -15,74 +15,90 @@
 
 <body>
     <div class="jumbotron">
-        <form action="">
-            <fieldset>
-                <legend>Personal Details:</legend>
-                <div class="input-group mb-3">
-                    <label for="">Name: </label>
-                    <input type="text" required="true" class="form-control" id="name-box"
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <!-- <br> -->
-                <div class="input-group mb-3">
-                    <label for="">E-mail: </label>
-                    <input type="email" required="true" class="form-control" id="email-box"
-                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                </div>
-                <div class="input-group mb-3">
-                    <label for="">Country: </label>
-                    <input list="countries" required="true" name="country" id="country-box">
-                    <datalist id="countries">
-                        <option value="India">
-                        <option value="United States Of America">
-                        <option value="China">
-                        <option value="Pakistan">
-                        <option value="Russia">
-                    </datalist>
-                </div>
+        <div class="container container-tabs">
+            <a href="" class="tab" id="tb-1" onclick="tabFunctioning('tb-1','container-1')">Validation Form</a>
+            <a href="" class="tab" id="tb-2" onclick="tabFunctioning('tb-2','container-2')">Tab-2</a>
+            <a href="" class="tab" id="tb-3" onclick="tabFunctioning('tb-3','container-3')">Tab-3</a>
+        </div>
+        <div class="container c1" id="container-1">
+            <form action="">
                 <fieldset>
-                    <legend>Contact Details:</legend>
-                    <div class="input-group mb-3" id="contact-box">
+                    <legend>Personal Details:</legend>
+                    <div class="input-group mb-3">
                         <label for="">Name: </label>
-                        <input type="text" required="true" class="form-control extra-names" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default">
+                        <input type="text" required="true" class="form-control" id="name-box"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
+                    <!-- <br> -->
                     <div class="input-group mb-3">
                         <label for="">E-mail: </label>
-                        <input type="email" required="true" class="form-control extra-emails" aria-label="Sizing example input"
+                        <input type="email" required="true" class="form-control" id="email-box"
+                            aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    </div>
+                    <div class="input-group mb-3">
+                        <label for="">Country: </label>
+                        <input list="countries" required="true" name="country" id="country-box">
+                        <datalist id="countries">
+                            <option value="India">
+                            <option value="United States Of America">
+                            <option value="China">
+                            <option value="Pakistan">
+                            <option value="Russia">
+                        </datalist>
+                    </div>
+                    <fieldset>
+                        <legend>Contact Details:</legend>
+                        <div class="input-group mb-3" id="contact-box">
+                            <label for="">Name: </label>
+                            <input type="text" required="true" class="form-control extra-names"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <div class="input-group mb-3">
+                            <label for="">E-mail: </label>
+                            <input type="email" required="true" class="form-control extra-emails"
+                                aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                        </div>
+                        <button type="button" onclick="addContact()" class="btn btn-sm btn-outline-secondary">+Add
+                            Contact</button>
+                        <div id="more-contact-box">
+
+                        </div>
+                    </fieldset>
+
+                    <div class="input-group mb-3">
+                        <label for="">Mobile No.: </label>
+                        <input type="number" id="mobile-box" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                        <div class="alert alert-warning" id="mobile-error" role="alert">
+                            Enter valid mobile no.
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <label for="">Age: </label>
+                        <input type="number" class="form-control" id="age-box" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default">
+                        <div class="alert alert-warning" id="age-error" role="alert">
+                            Enter valid age
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <label for="">VoterID: </label>
+                        <input type="number" class="form-control" id="id-box" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default">
                     </div>
-                    <button type="button" onclick="addContact()" class="btn btn-sm btn-outline-secondary">+Add Contact</button>
-                    <div id="more-contact-box">
-
-                    </div>
+                    <button type="submit" id="submit-button" class="btn btn-lg btn-primary"
+                        onclick="submitForm()">Submit</button>
                 </fieldset>
+            </form>
+        </div>
 
-                <div class="input-group mb-3">
-                    <label for="">Mobile No.: </label>
-                    <input type="number" id="mobile-box" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default">
-                    <div class="alert alert-warning" id="mobile-error" role="alert">
-                        Enter valid mobile no.
-                    </div>
-                </div>
-                <div class="input-group mb-3">
-                    <label for="">Age: </label>
-                    <input type="number" class="form-control" id="age-box" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default">
-                    <div class="alert alert-warning" id="age-error" role="alert">
-                        Enter valid age
-                    </div>
-                </div>
-                <div class="input-group mb-3">
-                    <label for="">VoterID: </label>
-                    <input type="number" class="form-control" id="id-box" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default">
-                </div>
-                <button type="submit" id="submit-button" class="btn btn-lg btn-primary"
-                    onclick="submitForm()">Submit</button>
-            </fieldset>
-        </form>
+        <div class="container c1" id="container-2">
+            <h1>Container-2</h1>
+        </div>
+
+        <div class="container c1" id="container-3">
+            <h1>Container-3</h1>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->

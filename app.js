@@ -94,3 +94,21 @@ const printAll = ()=>{
     )    
 
 }
+
+const tabFunctioning = (tabID,containerID)=>{
+    event.preventDefault()
+
+    const allTabs = document.querySelectorAll(".tab")
+    for(let i=0;i<allTabs.length;i++){
+        allTabs[i].style.color="black"
+        allTabs[i].style.borderColor="black"
+    }
+    document.getElementById(tabID).style.color="white"
+    document.getElementById(tabID).style.borderColor="white"
+
+    const allContainers = document.querySelectorAll(".c1")
+    for(let i=0;i<allContainers.length;i++){
+        allContainers[i].style.display="none"
+    }
+    document.getElementById(containerID).style.display="block"
+}
